@@ -32,3 +32,41 @@ The hooks are evailable for a lot of events. You can check [eve events hooks](ht
 ```bash
 docker-compose up -d
 ```
+
+You can try post on `localhost:${PORT}/sms` with these differents body below:
+
+**Will fail due to missing/empty required field `from`**
+
+```json
+{
+	"to": "you",
+	"content": "a text message from me to you",
+	"incoming": true,
+	"hash": "some-hash",
+	"sms_date": "2018-04-02 17:56:03"
+}
+```
+
+**Will fail due to incorrect datefield `sms_date`**
+```json
+{
+    "from": "me",
+	"to": "you",
+	"content": "a text message from me to you",
+	"incoming": true,
+	"hash": "some-hash",
+	"sms_date": "fake date"
+}
+```
+
+**Will succeed `sms_date`**
+```json
+{
+    "from": "me",
+	"to": "you",
+	"content": "a text message from me to you",
+	"incoming": true,
+	"hash": "some-hash",
+	"sms_date": "2018-04-02 17:56:03"
+}
+```
