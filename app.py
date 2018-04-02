@@ -29,7 +29,7 @@ def after_sms_insertion_callback(documents):
 def main():
     app.on_insert_sms += before_sms_insertion_callback
     app.on_inserted_sms += after_sms_insertion_callback
-    app.run(port=8080)
+    app.run(host='0.0.0.0', port=8080)
 
 
 if __name__ == '__main__':
