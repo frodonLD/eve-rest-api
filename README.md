@@ -1,5 +1,7 @@
 # Py-sms-api with eve
 
+[![Build Status](https://travis-ci.org/frodonLD/eve-rest-api.svg?branch=master)](https://travis-ci.org/frodonLD/eve-rest-api)
+
 * python as language
 * [eve](http://python-eve.org/config.html) as framework
 * mongodb as database
