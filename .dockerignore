@@ -1,0 +1,16 @@
+.git
+.gitignore
+.cache
+.vscode
+*.pyc
+__pycache__
+*.-info
+*.egg
+*.egg-info
+venv
+dist
+build
+LICENSE
+Dockerfile
+*.md
+!README*.md
