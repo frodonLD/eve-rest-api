@@ -4,7 +4,9 @@ python:
 
 install:
   - python setup.py -q install
-  - python setup.py -q test
   
+script:
+  - python setup.py -q test
+
 notifications:
   email: false
